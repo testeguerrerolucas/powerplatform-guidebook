@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API e Integrações - Microsoft Power Platform</title>
+    <meta name="description" content="Conheça as APIs e conectores disponíveis na Microsoft Power Platform para integração com outros sistemas.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Power Platform</h1>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Visão Geral</a></li>
+                    <li class="dropdown">
+                        <a href="#platforms">Plataformas</a>
+                        <div class="dropdown-content">
+                            <a href="power-apps.html">Power Apps</a>
+                            <a href="power-automate.html">Power Automate</a>
+                            <a href="power-bi.html">Power BI</a>
+                            <a href="power-virtual-agents.html">Power Virtual Agents</a>
+                        </div>
+                    </li>
+                    <li><a href="api-integration.html" class="active">API & Integrações</a></li>
+                    <li><a href="development.html">Desenvolvimento</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero api-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="tag">Conectores & APIs</span>
+                    <h1>Integre Tudo</h1>
+                    <h2>Centenas de conectores para unir seus sistemas</h2>
+                    <p>Conecte a Power Platform com sistemas internos, serviços em nuvem, bancos de dados e APIs de terceiros para criar soluções unificadas.</p>
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,192C960,160,1056,96,1152,80C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section class="connector-section" id="connectors">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">Conectores Populares</span>
+                    <h2>Escolha entre mais de 800 conectores</h2>
+                    <p>A Power Platform oferece uma ampla variedade de conectores pré-construídos para integrações rápidas e eficientes.</p>
+                </div>
+                
+                <div class="connector-grid">
+                    <div class="connector-card" data-aos="fade-up">
+                        <div class="connector-icon microsoft"></div>
+                        <h3>Microsoft 365</h3>
+                        <p>Integre com Excel, Outlook, SharePoint, Teams e outros aplicativos do Microsoft 365.</p>
+                    </div>
+                    
+                    <div class="connector-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="connector-icon salesforce"></div>
+                        <h3>Salesforce</h3>
+                        <p>Conecte com contatos, leads e oportunidades do Salesforce CRM.</p>
+                    </div>
+                    
+                    <div class="connector-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="connector-icon sap"></div>
+                        <h3>SAP</h3>
+                        <p>Integre com sistemas SAP ERP para dados corporativos críticos.</p>
+                    </div>
+                    
+                    <div class="connector-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="connector-icon sql"></div>
+                        <h3>SQL Server</h3>
+                        <p>Conecte diretamente com bancos de dados SQL para consultas e manipulação de dados.</p>
+                    </div>
+                    
+                    <div class="connector-card" data-aos="fade-up">
+                        <div class="connector-icon sharepoint"></div>
+                        <h3>SharePoint</h3>
+                        <p>Acesse e gerencie listas, documentos e sites do SharePoint.</p>
+                    </div>
+                    
+                    <div class="connector-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="connector-icon twitter"></div>
+                        <h3>Twitter</h3>
+                        <p>Monitore menções, publique tweets e analise tendências sociais.</p>
+                    </div>
+                    
+                    <div class="connector-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="connector-icon github"></div>
+                        <h3>GitHub</h3>
+                        <p>Automatize fluxos de trabalho de desenvolvimento e acesse repositórios.</p>
+                    </div>
+                    
+                    <div class="connector-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="connector-icon dynamics"></div>
+                        <h3>Dynamics 365</h3>
+                        <p>Integração nativa com todos os módulos do Dynamics 365.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-connector-section" id="custom">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">Conectores Personalizados</span>
+                    <h2>Crie suas próprias integrações</h2>
+                    <p>Desenvolva conectores personalizados para APIs específicas do seu negócio.</p>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step-card" data-aos="fade-up">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Defina sua OpenAPI</h3>
+                            <p>Comece com uma especificação OpenAPI (Swagger) para definir endpoints, parâmetros e respostas.</p>
+                            <pre><code>
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Exemplo",
+    "version": "v1"
+  },
+  "host": "api.exemplo.com",
+  "paths": {
+    "/products": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Configure a Segurança</h3>
+                            <p>Especifique os métodos de autenticação para sua API (OAuth2, Chave API, etc).</p>
+                            <pre><code>
+{
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    }
+  }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Crie Políticas</h3>
+                            <p>Adicione políticas de transformação, validação e manipulação de respostas.</p>
+                            <pre><code>
+<policies>
+  <inbound>
+    <base />
+    <set-header name="x-custom-header" exists-action="override">
+      <value>custom-value</value>
+    </set-header>
+  </inbound>
+</policies>
+                            </code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Teste e Publique</h3>
+                            <p>Teste suas operações e publique o conector para uso em toda a organização.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="api-examples" id="examples">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">Exemplos Práticos</span>
+                    <h2>Integração na Prática</h2>
+                    <p>Veja como usar conectores em cenários reais de negócio.</p>
+                </div>
+                
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="crm">Integração CRM</button>
+                        <button class="tab-button" data-tab="erp">Integração ERP</button>
+                        <button class="tab-button" data-tab="social">Mídia Social</button>
+                        <button class="tab-button" data-tab="custom">API Personalizada</button>
+                    </div>
+                    
+                    <div class="tab-contents">
+                        <div class="tab-content active" id="crm-content">
+                            <h3>Integração com CRM</h3>
+                            <p>Fluxo de trabalho para sincronização de leads do Salesforce com o Dynamics 365.</p>
+                            
+                            <div class="code-sample">
+                                <pre><code>
+// Power Automate Flow - Pseudocódigo
+Trigger: Quando um novo lead é criado no Salesforce
+Ação 1: Obter detalhes do lead do Salesforce
+Ação 2: Verificar se o lead já existe no Dynamics 365
+Condição: SE o lead não existe ENTÃO
+  Ação 3: Criar novo lead no Dynamics 365
+  Ação 4: Adicionar tarefa de acompanhamento
+SENÃO
+  Ação 5: Atualizar lead existente no Dynamics 365
+  Ação 6: Registrar atividade de atualização
+FIM Condição
+Ação 7: Enviar notificação por email
+                                </code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="erp-content">
+                            <h3>Integração com ERP</h3>
+                            <p>Automatização do processo de aprovação de pedidos de compra com SAP.</p>
+                            
+                            <div class="code-sample">
+                                <pre><code>
+// Power Automate Flow - Pseudocódigo
+Trigger: Quando um novo pedido de compra excede R$10.000
+Ação 1: Consultar detalhes do pedido no SAP
+Ação 2: Verificar orçamento disponível
+Condição: SE orçamento disponível ENTÃO
+  Ação 3: Iniciar fluxo de aprovação
+  Ação 4: Esperar aprovação do gerente
+  Condição: SE aprovado ENTÃO
+    Ação 5: Enviar pedido para processamento no SAP
+    Ação 6: Atualizar registro financeiro
+  SENÃO
+    Ação 7: Notificar solicitante sobre recusa
+  FIM Condição
+SENÃO
+  Ação 8: Rejeitar automaticamente e notificar
+FIM Condição
+                                </code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="social-content">
+                            <h3>Integração com Mídias Sociais</h3>
+                            <p>Monitoramento e resposta automatizada a menções no Twitter.</p>
+                            
+                            <div class="code-sample">
+                                <pre><code>
+// Power Automate Flow - Pseudocódigo
+Trigger: Quando uma nova menção ao @SuaMarca ocorre no Twitter
+Ação 1: Analisar sentimento do tweet usando AI Builder
+Condição: SE sentimento é negativo ENTÃO
+  Ação 2: Criar caso de suporte no Dynamics 365
+  Ação 3: Notificar equipe de atendimento
+  Ação 4: Responder com mensagem padrão de suporte
+SENÃO SE sentimento é positivo ENTÃO
+  Ação 5: Salvar tweet em lista de depoimentos
+  Ação 6: Responder agradecendo
+  Ação 7: Verificar se é cliente existente
+SENÃO
+  Ação 8: Categorizar para análise posterior
+FIM Condição
+Ação 9: Registrar interação no banco de dados
+                                </code></pre>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="custom-content">
+                            <h3>Integração com API Personalizada</h3>
+                            <p>Conexão com sistema legado interno usando conector personalizado.</p>
+                            
+                            <div class="code-sample">
+                                <pre><code>
+// Definição do Conector Personalizado
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sistema Legado API",
+    "version": "v1"
+  },
+  "host": "api.interno.empresa.com",
+  "basePath": "/v1",
+  "schemes": ["https"],
+  "paths": {
+    "/clientes/{id}": {
+      "get": {
+        "summary": "Obter Cliente",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
+
+// Uso no Power Apps (Pseudocódigo)
+função ObterDadosCliente(id) {
+  resposta = ConectorLegado.ObterCliente(id);
+  return resposta;
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Comece a integrar hoje mesmo</h2>
+                    <p>Explore a biblioteca de conectores e crie integrações poderosas para sua organização.</p>
+                    <div class="cta-buttons">
+                        <a href="#connectors" class="btn btn-primary">Explorar Conectores</a>
+                        <a href="development.html" class="btn btn-secondary">Ver Documentação</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Microsoft Power Platform</h3>
+                    <p>Ferramentas para análise, ação e automatização de negócios</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="power-apps.html">Power Apps</a></li>
+                        <li><a href="power-automate.html">Power Automate</a></li>
+                        <li><a href="power-bi.html">Power BI</a></li>
+                        <li><a href="power-virtual-agents.html">Power Virtual Agents</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="api-integration.html">APIs e Integrações</a></li>
+                        <li><a href="development.html">Guia de Desenvolvimento</a></li>
+                        <li><a href="#">Documentação</a></li>
+                        <li><a href="#">Comunidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Treinamento</a></li>
+                        <li><a href="#">Status do Serviço</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Microsoft. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
